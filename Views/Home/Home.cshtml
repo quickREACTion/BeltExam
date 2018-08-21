@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="~/css/Format.css">
+    <title>Home</title>
+</head>
+<body>
+    <div id="container">
+        <div class="HeaderTitleDiv">
+            <h1>Dojo Activity Center</h1>
+            <form asp-action="Logout" asp-controller="Home" method="POST">
+                <input type="submit" name="Logout" value="Log Off">
+            </form>
+            <h3>Welcome @ViewBag.user.First_Name</h3>
+        </div>
+
+
+        <div>
+            <table class="HomeDisplayTable">
+                <tbody>
+                    <tr class="HomeDisplayTR">
+                        <th>Activity</th>
+                        <th>Date and Time</th>
+                        <th>Duration</th>
+                        <th>Event Coordinator</th>
+                        <th>Number of Participants</th>
+                        <th>Actions</th>
+                    </tr>
+                @{
+                    foreach( var AA in @ViewBag.activity) {
+                    <tr>
+                        <td class="HomeDisplayTD">
+                            <form asp-action="ActivitiesDisplay" asp-controller="Home" method="POST">
+                            <input type="hidden" name="activityId" value=@AA.activitiesId>
+                            <input type="submit" value="@AA.Title">
+                        </form></td>
+
+                        <td class="HomeDisplayTD">@AA.Date.ToString("MM/dd") at @AA.Time.ToString(@"hh\:mm")</td>
+                        <td class="HomeDisplayTD">@AA.Duration.ToString(@"hh\:mm")</td>
+                        <td class="HomeDisplayTD">@AA.User.First_Name</td>
+                        <td class="HomeDisplayTD">@AA.Guests.Count</td>
+                        @{
+                            bool isGuest = false;
+                            for(int i=0; i < AA.Guests.Count; i++) {
+                                if(AA.Guests[i].usersId == @ViewBag.user.usersId) {
+                                    isGuest = true;
+                                }
+                            }
+
+                            if(AA.usersId == @ViewBag.user.usersId) {
+                            <td class="HomeDisplayTD"><form action="Delete" method="POST">
+                                <input type="hidden" name="deleteAct" value=@AA.activitiesId>
+                                <input type="submit" name="Delete" value="Delete">
+                            </form></td>                                
+                            } else if(!isGuest) {
+                            <td class="HomeDisplayTD"><form action="Join" method="POST">
+                                <input type="hidden" name="JoinHidden" value=@AA.activitiesId>
+                                <input type="submit" name="Join" value="Join">
+                            </form></td>                                
+                            } else {
+                            <td class="HomeDisplayTD"><form action="Leave" method="POST">
+                                <input type="hidden" name="LeaveHidden" value=@AA.activitiesId>
+                                <input type="submit" name="Leave" value="Leave">
+                            </form></td>                                
+                            }                            
+                        }
+                    </tr>
+                    }
+                }
+                </tbody>
+            </table>
+
+            <div class="HomeAddNewActivity">
+                <a href="/New">Add New Activity!</a>
+            </div>
+
+        </div>
+
+
+
+
+
+    </div>
+    
+</body>
+</html>

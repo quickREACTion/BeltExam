@@ -1,0 +1,11 @@
+C:\Users\Chris Herrick\Desktop\Coding Dojo\C#_Belt_Prep\BeltExam\bin\Debug\netcoreapp2.0\BeltExam.deps.json
+C:\Users\Chris Herrick\Desktop\Coding Dojo\C#_Belt_Prep\BeltExam\bin\Debug\netcoreapp2.0\BeltExam.runtimeconfig.json
+C:\Users\Chris Herrick\Desktop\Coding Dojo\C#_Belt_Prep\BeltExam\bin\Debug\netcoreapp2.0\BeltExam.runtimeconfig.dev.json
+C:\Users\Chris Herrick\Desktop\Coding Dojo\C#_Belt_Prep\BeltExam\bin\Debug\netcoreapp2.0\BeltExam.dll
+C:\Users\Chris Herrick\Desktop\Coding Dojo\C#_Belt_Prep\BeltExam\bin\Debug\netcoreapp2.0\BeltExam.pdb
+C:\Users\Chris Herrick\Desktop\Coding Dojo\C#_Belt_Prep\BeltExam\obj\Debug\netcoreapp2.0\BeltExam.csproj.CoreCompileInputs.cache
+C:\Users\Chris Herrick\Desktop\Coding Dojo\C#_Belt_Prep\BeltExam\obj\Debug\netcoreapp2.0\BeltExam.AssemblyInfoInputs.cache
+C:\Users\Chris Herrick\Desktop\Coding Dojo\C#_Belt_Prep\BeltExam\obj\Debug\netcoreapp2.0\BeltExam.AssemblyInfo.cs
+C:\Users\Chris Herrick\Desktop\Coding Dojo\C#_Belt_Prep\BeltExam\obj\Debug\netcoreapp2.0\BeltExam.dll
+C:\Users\Chris Herrick\Desktop\Coding Dojo\C#_Belt_Prep\BeltExam\obj\Debug\netcoreapp2.0\BeltExam.pdb
+C:\Users\Chris Herrick\Desktop\Coding Dojo\C#_Belt_Prep\BeltExam\obj\Debug\netcoreapp2.0\BeltExam.csprojAssemblyReference.cache

@@ -1,0 +1,248 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    font-family: "Helvetica New", sans-serif;
+}
+
+#container {
+    width: 1000px;
+    margin: 2% auto;
+}
+
+.cfb { clear: both;}
+
+span {
+    display: block;
+    color: red; 
+    font-style: italic; 
+    margin-bottom: 1em;
+}
+
+.FL {float: left;}
+
+/* Registration */
+
+.logRegPositionDiv {
+    float: left;
+    width: 50%;
+}
+
+.logRegPositionDiv h1 {
+    margin-bottom: 5%;
+}
+
+.logRegFormIndDivPosition {
+    margin-bottom: 5%;
+}
+
+.logRegFormIndDivPosition p {
+    float: left;
+    width: 25%;  
+}
+
+.logRegFormIndDivPosition input[type="text"], 
+.logRegFormIndDivPosition input[type="password"] {
+    display: inline-block;
+    width: 60%;
+    line-height: 2em;
+    border: 2px solid darkgray;    
+}
+
+.logRegSubmitButton {
+    border: 2px solid black;
+    padding: 0.5em 2em;
+    box-shadow: 2px 2px 0 0 black;
+    margin-left: 9em;
+    background-color: transparent;    
+}
+
+
+
+/* Home Dashboard */
+.HeaderTitleDiv {
+    float: left;
+    width: 100%;
+    border-bottom: 2px solid black;
+    margin-bottom: 5%;   
+}
+
+.HeaderTitleDiv h1 {
+    float: left;
+    width: 40%;    
+}
+
+.HeaderTitleDiv h3 {
+    float: right;
+    width: 20%;   
+}
+
+.HeaderTitleDiv Form {
+    float: right;
+    width: 20%;    
+}
+
+.HeaderTitleDiv Form input[type="submit"] {
+    border: none;
+    background: transparent;
+    color: dodgerblue;
+    cursor: pointer;
+    text-decoration: underline;
+    line-height: 4em;
+    font-size: 0.9em;
+    cursor: pointer;    
+}
+
+
+/* Display Table */
+.HomeDisplayTable {
+    border: 2px solid black;
+    padding: 0.5em;
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 5%;    
+}
+
+.HomeDisplayTR {
+    border-bottom: 2px solid black;    
+}
+
+.HomeDisplayTR th {
+    border-right: 2px solid black;
+    width: auto;    
+}
+
+.HomeDisplayTD {
+    border-right: 2px solid black;
+    padding: 0.5em;    
+}
+
+.HomeDisplayTD Form input[type="Submit"] {
+    background: none;
+    border: none;
+    color: dodgerblue;
+    text-decoration: underline;
+    font-size: 0.9em;
+}
+
+.HomeAddNewActivity {
+    float: right;
+}
+
+.HomeAddNewActivity a {
+    border: 2px solid black;
+    box-shadow: 3px 3px 0 0 black;
+    padding: 0.5em 1em;
+    background-color: transparent;
+    color: black;
+    text-decoration: none;
+}
+
+
+/* Create New Page */
+.NewFormMainDivs {
+    float: left;
+    width: 50%;
+    margin-bottom: 5%;
+}
+
+.NewFormMainDivs p {
+    float: left;
+    width: 15%;    
+}
+
+.NewFormMainDivs input[type="text"], 
+.NewFormMainDivs input[type="Time"], 
+.NewFormMainDivs input[type="Date"] {
+    line-height: 2em;
+    border: 2px solid black;
+    padding: 0 0.2em;    
+}
+
+.NewFormTextArea {
+    float: left;
+    width: 100%;
+    margin-bottom: 5%;
+}
+
+.NewFormTextArea p {
+    float: left;
+    width: 15%;     
+}
+
+.NewFormTextArea textarea{
+    resize: none;
+    width: 60%;
+    height: 10em;
+    overflow-y: auto;
+    line-height: 2em;
+    border: 2px solid black;
+    padding: 0 0.2em;  
+}
+
+.NewFormCreateActDiv {
+    float: right;
+    margin-right: 25%;
+}
+
+.NewFormCreateActDiv input[type="Submit"] {
+    border: 2px solid black;
+    background: none;
+    padding: 0.5em 1em;
+    box-shadow: 3px 3px 0 0 black;
+    cursor: pointer;
+}
+
+
+/* Activities Display Page */
+.ActivitiesTitle h1 {
+    float: left;
+    width: 60%;
+    margin-bottom: 5%;    
+}
+
+.ActivitiesTitle form {
+    float: left;
+}
+
+.ActivitiesTitle form input[type="submit"] {
+    border: 2px solid black;
+    box-shadow: 3px 3px 0 0 black;
+    padding: 0.5em 1.5em;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 1.1em;    
+}
+
+.ActivitiesEventCoord {
+    margin-bottom: 5%;
+    float: left;
+    width: 100%;
+}
+
+.ActivitiesEventCoord h3 {
+    float: left;
+    width: 20%;
+}
+
+.ActivitiesEventCoord p {
+    float: left;
+    font-size: 1.3em;
+}
+
+.ActivitiesDescription {
+    float: left;
+    width: 100%;
+    margin-bottom: 5%;
+}
+
+.ActivitiesDescription h3 {
+    margin-bottom: 1%;
+}
+
+.ActivitiesDescription p {
+    margin-left: 2%;
+    height: auto;
+    width: 60%;
+    float: left;
+    margin-bottom: 1%;    
+}

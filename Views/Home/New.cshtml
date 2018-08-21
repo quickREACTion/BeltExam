@@ -1,0 +1,70 @@
+@model AcivitiesValidator
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="~/css/Format.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <div class="HeaderTitleDiv">
+            <h1>Dojo Activity Center</h1>
+            <a href="/Home">Home</a>
+            <form asp-action="Logout" asp-controller="Home" method="POST">
+                <input type="submit" name="Logout" value="Log Off">
+            </form>
+        </div>  
+
+        <form asp-action="Create" asp-controller="Home" method="POST">
+            <div>
+                <h1>Create an Activity!</h1>
+
+                <div class="NewFormMainDivs">
+                    <span asp-validation-for="Title"></span>
+                    <p>Title:</p>
+                    <input type="text" asp-for="Title">
+                </div>
+
+                <div class="NewFormMainDivs">
+                    <span asp-validation-for="Time"></span>
+                    <p>Time:</p>
+                    <input type="Time" asp-for="Time">
+                </div>
+
+                <div class="NewFormMainDivs">
+                    <span asp-validation-for="Date"></span>
+                    <p>Date: </p>
+                    <input type="Date" asp-for="Date">
+                </div>
+
+                <div class="NewFormMainDivs">
+                    <span asp-validation-for="Duration"></span>
+                    <p>Duration: </p>
+                    <input type="Time" asp-for="Duration">
+                    <select>
+                        <option value="Days">Days</option>
+                        <option value="Hours">Hours</option>
+                        <option value="Minutes">Minutes</option>
+                    </select>
+                </div>
+
+                <div class="NewFormTextArea">
+                    <span asp-validation-for="Description"></span>
+                    <p>Description: </p>
+                    <textarea type="text" asp-for="Description" row="6"></textarea>
+                </div>
+                <div class="cfb"></div>
+
+                <div class="NewFormCreateActDiv">
+                    <input type="submit" name="createActivity" value="Create Activity">
+                </div>
+            </form>
+
+
+        </div>     
+    </div>
+</body>
+</html>

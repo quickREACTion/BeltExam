@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="~/css/Format.css">
+    <title>Activity</title>
+</head>
+<body>
+    <div id="container">
+        <div class="HeaderTitleDiv">
+            <h1>Dojo Activity Center</h1>
+            <a href="/Home">Home</a>
+            <form asp-action="Logout" asp-controller="Home" method="POST">
+                <input type="submit" name="Logout" value="Log Off">
+            </form>
+        </div>
+        <div class="cfb"></div>
+
+        <div class="ActivitiesTitle">
+            <h1>@ViewBag.specAct.Title</h1>
+        @{
+            foreach(var AG in @ViewBag.activity) {
+
+                bool isGuest = false;
+                for(int i=0; i < AG.Guests.Count; i++) {
+                    if(AG.Guests[i].usersId == @ViewBag.user.usersId) {
+                        isGuest = true;
+                    }
+                }
+
+            if(@AG.usersId == @ViewBag.user.usersId) {
+                <form action="Delete" method="POST">
+                    <input type="hidden" name="deleteAct" value=@AG.activitiesId>
+                    <input type="submit" name="Delete" value="Delete" />
+                </form>
+            } else if(!isGuest) {
+                <form asp-action="Join" asp-controller="Home" method="POST">
+                    <input type="hidden" name="JoinHidden" value=@AG.activitiesId>
+                    <input type="submit" name="Join" value="Join" />
+                </form>
+            } else {
+                <form asp-action="Leave" asp-controller="Home" method="POST">
+                    <input type="hidden" name="LeaveHidden" value=@AG.activitiesId>
+                    <input type="submit" name="Leave" value="Leave" />
+                </form>
+            }
+
+            }
+        }
+
+            <div class="cfb"></div>
+            <div class="ActivitiesEventCoord">
+                <h3>Event Coordinator: </h3>
+                <p>@ViewBag.specAct.User.First_Name</p>
+            </div>
+            <div class="cfb"></div>
+            <div class="ActivitiesEventCoord">
+                <h3>Event Start Time: </h3>
+                <p>@ViewBag.specAct.Time.ToString(@"hh\:mm")</p>
+            </div>
+            <div class="cfb"></div>
+            <div class="ActivitiesDescription">
+                <h3>Description</h3>
+                <p>@ViewBag.specAct.Description</p>
+            </div>
+            <div class="cfb"></div>
+
+            <div class="ActivitiesDescription">
+                <h3>Participants:</h3>
+            @{
+                foreach(var AP in @ViewBag.actPart.Guests) {
+                    if(@AP.usersId == @ViewBag.user.usersId) {
+                        <p>You are currently a participant!</p>
+                    } else {
+                        <p>@AP.User.First_Name</p>
+
+                    }
+                }
+            }
+
+            </div>
+            <div class="cfb"></div>
+        </div> 
+
+
+
+
+    </div>
+</body>
+</html>
